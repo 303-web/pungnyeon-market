@@ -71,18 +71,25 @@ export default function Page() {
           </header>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {products.map((p) => (
-              <div key={p.id} style={{ backgroundColor: '#fff', borderRadius: '20px', padding: '18px', boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
-                <div style={{ display: 'flex', gap: '16px' }}>
-                  {/* 사진 영역 */}
-                  <div style={{ width: '100px', height: '100px', backgroundColor: '#f0f0f0', borderRadius: '12px', overflow: 'hidden' }}>
-                    <img src={p.image_url || 'https://via.placeholder.com/100'} alt={p.name} style={{ width: '100%', height: '100%', objectFit 'cover' }} />
-                  </div>
-                  
-                  {/* 정보 영역 */}
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '6px' }}>
-                      <span style={{ fontSize: '10px', backgroundColor: '#e6f4ea', color: '#137333', padding: '2px 6px', borderRadius: '4px' }}>🚚 입고: {p.arrival_date || '미정'}</span>
+           {products.map((p) => (
+            <div key={p.id} style={{ backgroundColor: '#fff', borderRadius: '20px', padding: '18px', boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <div style={{ width: '100px', height: '100px', backgroundColor: '#f0f0f0', borderRadius: '12px', overflow: 'hidden' }}>
+                  <img 
+                    src={p.image_url || 'https://via.placeholder.com/100'} 
+                    alt={p.name} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                </div> {products.map((p) => (
+            <div key={p.id} style={{ backgroundColor: '#fff', borderRadius: '20px', padding: '18px', boxShadow: '0 4px 10px rgba(0,0,0,0.03)' }}>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <div style={{ width: '100px', height: '100px', backgroundColor: '#f0f0f0', borderRadius: '12px', overflow: 'hidden' }}>
+                  <img 
+                    src={p.image_url || 'https://via.placeholder.com/100'} 
+                    alt={p.name} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                </div>
                       <span style={{ fontSize: '10px', backgroundColor: '#fff0f0', color: '#d93025', padding: '2px 6px', borderRadius: '4px' }}>⏰ 마감: {p.deadline_date || '조기마감'}</span>
                     </div>
                     <div style={{ fontWeight: 'bold', fontSize: '17px', color: '#1a1a1a' }}>{p.name}</div>
