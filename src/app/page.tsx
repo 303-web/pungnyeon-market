@@ -76,7 +76,7 @@ export default function Page() {
                 <div style={{ display: 'flex', gap: '16px' }}>
                   {/* 사진 영역 */}
                   <div style={{ width: '100px', height: '100px', backgroundColor: '#f0f0f0', borderRadius: '12px', overflow: 'hidden' }}>
-                    <img src={p.image_url || 'https://via.placeholder.com/100'} alt={p.name} style={{ width: '100%', height: '100%', object_fit: 'cover' }} />
+                    <img src={p.image_url || 'https://via.placeholder.com/100'} alt={p.name} style={{ width: '100%', height: '100%', objectFit 'cover' }} />
                   </div>
                   
                   {/* 정보 영역 */}
