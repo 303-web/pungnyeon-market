@@ -93,12 +93,17 @@ export default function Page() {
                       <span style={{ fontSize: '10px', backgroundColor: '#fff0f0', color: '#d93025', padding: '2px 6px', borderRadius: '4px' }}>⏰ 마감: {p.deadline_date || '조기마감'}</span>
                     </div>
                     <div style={{ fontWeight: 'bold', fontSize: '17px', color: '#1a1a1a' }}>{p.name}</div>
-                    <div style={{ color: '#d93025', fontWeight: 'bold', fontSize: '18px', marginTop: '6px' }}>{p.price?.toLocaleString()}원</div>
-                  </div>
-                </div>
-                
-                <button 
-                  onClick={() => { setSelectedProduct(p); setView('reserve'); }}
+                    <div style={{ color: '#d9025', fontWeight: 'bold', fontSize: '18px' }}>
+            {p.price}원
+          </div>
+        </div>
+      </div>
+      <button 
+        onClick={() => { setSelectedProduct(p); setView('reserve'); }}
+        style={{ width: '100%', backgroundColor: '#127333', color: '#fff', border: 'none', padding: '10px', borderRadius: '8px', cursor: 'pointer' }}
+      >
+        예약하기
+      </button>
                   style={{ width: '100%', backgroundColor: '#137333', color: '#fff', border: 'none', padding: '12px', borderRadius: '12px', marginTop: '14px', fontWeight: 'bold', cursor: 'pointer' }}
                 >
                   예약하기
